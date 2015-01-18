@@ -1,4 +1,15 @@
-// original answer (needs simplification)!
+function LongestWord(sen) { 
+  var arr = sen.split(/[\W]+/);
+  var bigWord = "";
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length > bigWord.length) {
+      bigWord = arr[i]; 
+    }  
+  } 
+return bigWord;
+}
+
+/* first attempt:
 
 function LongestWord(sen) { 
   var arr = sen.split(/[!& ,.]+/);
@@ -14,19 +25,4 @@ function LongestWord(sen) {
     }
   }
 }
-
-/* Better: 
-
-
-function LongestWord(sen) { 
-  var arr = sen.split(/[!& ,.]+/);
-  var bigWord = "";
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i].length > bigWord.length) {
-      bigWord = arr[i]; 
-    }  
-  } 
-return bigWord;
-}
-
 */
